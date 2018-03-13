@@ -1,0 +1,11 @@
+[
+  "config" : {
+  "trusted_domains" : { 
+    "localhost",
+    "k-dc7900",
+    "k-dc7900.local",
+    "nextcloud.local"
+  },
+  "overwrite.cli.url" : "https://example.org/nextcloud",
+  "htaccess.RewriteBase" : "/nextcloud"
+]
