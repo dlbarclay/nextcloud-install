@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PHP7_PACKAGES=$(echo "
+PACKAGES_PHP7=$(echo "
+    php7.0
     php7.0-bz2
     php7.0-cli
     php7.0-common
@@ -14,6 +15,7 @@ PHP7_PACKAGES=$(echo "
     php7.0-mbstring
     php7.0-mcrypt
     php7.0-mysql
+    php7.0-pgsql
     php7.0-xml
     php7.0-zip
     php-apcu
@@ -23,10 +25,19 @@ PHP7_PACKAGES=$(echo "
     php-smbclient
 ")
 
-ALL_PACKAGES=$(echo "
-    $PHP_PACKAGES
-    apache2 libapache2-mod-php7.0
-    ffmpeg
+PACKAGES_PGSQL=$(echo "
+    postgresql-client postgresql
 ")
 
+PACKAGES_APACHE=$(echo "
+    apache2 libapache2-mod-php7.0
+")
+
+PACKAGES_NGINX=$(echo "
+    
+")
+
+PACKAGES_COMMON=$(echo "
+    ffmpeg
+")
 
