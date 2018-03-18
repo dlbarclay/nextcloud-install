@@ -7,6 +7,8 @@ mkdir $NEXTCLOUD_DIR_DATA
 
 chown -R www-data:www-data $NEXTCLOUD_DIR
 
+bash nginx-openssl-create.sh
+
 if [ "$WEBSERVER" = "apache2" ]; then
     cp $APACHE2_NEXTCLOUD_FILE $APACHE2_NEXTCLOUD_CONF
     ln -s $APACHE2_NEXTCLOUD_CONF $APACHE2_NEXTCLOUD_ENAB
