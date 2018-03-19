@@ -1,0 +1,23 @@
+TODO
+add to /etc/php/7.0/fpm/pool.d/www.conf
+    env[HOSTNAME] = $HOSTNAME
+    env[PATH] = /usr/local/bin:/usr/bin:/bin
+    env[TMP] = /tmp
+    env[TMPDIR] = /tmp
+    env[TEMP] = /tmp
+
+requires php7.0-fpm.service restart
+
+
+TODO
+add memcache to nextcloud install
+    sudo -u www-data php occ config:system:set "memcache.local" --value "\OC\Memcache\APCu";
+
+enabled after next page load, no backend reset required
+
+
+TODO
+add to nextcloud.conf nginx site
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+requires nginx.service restart
